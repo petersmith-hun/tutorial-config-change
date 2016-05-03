@@ -58,6 +58,16 @@
                     <path>/${project.build.finalName}</path>
                 </configuration>
             </plugin>
+            
+            <!-- include maven war plugin and set failOnMissingWebXml to false, because we won't have any -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
         </plugins>
     </build> 
 </project>
